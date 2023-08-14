@@ -6,9 +6,9 @@ import (
 )
 
 func sqrt(x int) int {
-	fmt.Println("Get Sqrt of ", x)
+	fmt.Println("Sqrt of ", x)
 	right := int(math.Sqrt(float64(math.MaxInt)))
-	fmt.Println(right)
+	// fmt.Println(right)
 	var left = 0
 
 	for left <= +right {
@@ -23,7 +23,7 @@ func sqrt(x int) int {
 		}
 
 		middle := float32(left + ((right - left) / 2))
-		fmt.Println(middle)
+		// fmt.Println(middle)
 
 		result := middle * middle
 		// fmt.Println("middle ", middle, " result ", result)
@@ -31,10 +31,10 @@ func sqrt(x int) int {
 			return int(middle)
 		} else if result < float32(x) {
 			left = int(middle) + 1
-			fmt.Println("Left : ", left)
+			// fmt.Println("Left : ", left)
 		} else {
 			right = int(middle) - 1
-			fmt.Println("Right : ", right)
+			// fmt.Println("Right : ", right)
 		}
 
 	}
@@ -42,5 +42,5 @@ func sqrt(x int) int {
 }
 
 func main() {
-	fmt.Println(sqrt(8))
+	fmt.Println("Result : ", sqrt(8))
 }
