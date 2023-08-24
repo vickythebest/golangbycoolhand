@@ -53,9 +53,9 @@ func deleteDuplicates(head *ListNode) *ListNode {
 		}
 
 	}
-
 	return head
 }
+
 func deleteDuplicates1(head *ListNode) *ListNode {
 
 	currentNode := head
