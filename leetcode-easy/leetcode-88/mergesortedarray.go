@@ -35,6 +35,7 @@ func main() {
 
 }
 
+// SOLUTION 1
 func merge(nums1 []int, m int, nums2 []int, n int) {
 
 	length := 0
@@ -79,6 +80,35 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 	}
 }
 
+// SOLUTION 2
+/*func merge(nums1 []int, m int, nums2 []int, n int) {
+
+	pos := (m + n) - 1
+	m = (m - 1)
+	n = (n - 1)
+
+	for n >= 0 {
+
+		fmt.Println("M : ", m, " N : ", n, " POS : ", pos)
+		if m > 0 && nums1[m] > nums2[n] {
+
+			nums1[pos] = nums1[m]
+			m--
+			// pos--
+		} else {
+			nums1[pos] = nums2[n]
+			n--
+			// pos--
+		}
+		pos--
+	}
+
+	for _, result := range nums1 {
+		fmt.Println("output : ", result)
+	}
+}
+*/
+
 // func merge(nums1 []int, m int, nums2 []int, n int) {
 
 // 	i := 0
@@ -86,6 +116,7 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 // 	// newarray := num1
 // 	var mergeArray []int
 // 	length := 0
+
 // 	for len(mergeArray) <= (m+n)-1 {
 
 // 		fmt.Printf("num1[%v] == num2[%v] and length : %v", nums1[i], nums2[j], length)
