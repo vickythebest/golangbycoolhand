@@ -37,7 +37,7 @@ func main() {
 
 func merge(nums1 []int, m int, nums2 []int, n int) {
 
-	length := -1
+	length := 0
 
 	k := ((m + n) - 1)
 
@@ -46,6 +46,7 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 
 	m = m - 1
 	n = n - 1
+	pos := k
 	for length <= k {
 
 		if m >= 0 {
@@ -56,21 +57,20 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 			right = nums2[n]
 		}
 
-		fmt.Printf("left : %v right : %v K : %v \n", left, right, k)
+		// fmt.Printf("left : %v right : %v pos : %v \n", left, right, pos)
 
-		if left >= right {
-			nums1[k] = left
+		if n < 0 || left > right {
+			nums1[pos] = left
 			m--
-			k--
-
+			pos--
 		} else {
-			nums1[k] = right
+			nums1[pos] = right
 			n--
-			k--
+			pos--
 
 		}
 		length++
-		fmt.Printf("M : %v  N : %v K : %v length : %v \n", m, n, k, length)
+		// fmt.Printf("M : %v  N : %v pos : %v length : %v \n", m, n, pos, length)
 
 	}
 
