@@ -1,14 +1,23 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 	"regexp"
 	"strings"
 )
 
 func main() {
+
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("enter string to validate palindrome : ")
+	scanner.Scan()
+	fmt.Println("The string palindrom validation : ", isPalindrome(scanner.Text()))
+
+	// fmt.Println(isPalindrome("abcba"))
 	// fmt.Println(isPalindrome("A man, a plan, a canal: Panama"))
-	fmt.Println(isPalindrome("abcba"))
 }
 
 func isPalindrome(s string) bool {

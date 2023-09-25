@@ -1,10 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"strconv"
+)
 
 func main() {
-	num := 5
-	fmt.Printf("fibonacci of : %v is %v", num, fibonacci(num))
+
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Print(" Please enter digit : ")
+	scanner.Scan()
+
+	userinput, err := strconv.ParseInt(scanner.Text(), 10, 64)
+	if err != nil {
+		log.Fatal(err)
+
+	}
+
+	fmt.Printf("fibonacci of : %v is %v", int(userinput), fibonacci(int(userinput)))
+	// num := 5
+	// fmt.Printf("fibonacci of : %v is %v", num, fibonacci(num))
 
 }
 

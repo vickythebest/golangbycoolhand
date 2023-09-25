@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"math"
+	"os"
+	"strconv"
 )
 
 func sqrt(x int) int {
@@ -42,5 +45,10 @@ func sqrt(x int) int {
 }
 
 func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Println("Enter positive number : ")
+	scanner.Scan()
+	digit, _ := strconv.ParseInt(scanner.Text(), 10, 64)
+	fmt.Println("The sqrt of ", scanner.Text(), "= ", sqrt(int(digit)))
 	fmt.Println("Result : ", sqrt(8))
 }
