@@ -1,11 +1,22 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+	"strconv"
 )
 
 func main() {
-	fmt.Println("Total distinct way to climb stair : ", claimbstair(5))
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Enter stair number : ")
+	scanner.Scan()
+	count := scanner.Text()
+	stair, _ := strconv.ParseInt(count, 10, 64)
+	fmt.Println(int(stair))
+	fmt.Println("Total distinct way to climb stair : ", claimbstair(int(stair)))
+	// fmt.Println("Total distinct way to climb stair : ", claimbstair(5))
 }
 
 func claimbstair(num int) int {
