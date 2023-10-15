@@ -49,6 +49,9 @@ func main() {
 
 	fmt.Println("Result : ", longestCommonSubsequence(input1, input2))
 
+	fmt.Print("Result recursion: ")
+	fmt.Print(lcs(input1, input2, len(input1), len(input2)))
+
 }
 func longestCommonSubsequence(text1 string, text2 string) int {
 
@@ -60,11 +63,11 @@ func longestCommonSubsequence(text1 string, text2 string) int {
 		dp[i] = make([]int, col+1)
 	}
 
-	fmt.Printf("Text1 size = %v and Text2 size = %v", rows, col)
+	// fmt.Printf("Text1 size = %v and Text2 size = %v", rows, col)
 	fmt.Println()
 
 	var max = func(x, y int) int {
-		fmt.Println("check max between ", x, " and ", y)
+		// fmt.Println("check max between ", x, " and ", y)
 		if x < y {
 			return y
 		}
@@ -73,7 +76,7 @@ func longestCommonSubsequence(text1 string, text2 string) int {
 	// Fill the DP table using the update rule
 	for i := 1; i <= rows; i++ {
 		for j := 1; j <= col; j++ {
-			fmt.Println("text1[i-1] :", text1[i-1], " text2[j-1] :", text2[j-1])
+			// fmt.Println("text1[i-1] :", text1[i-1], " text2[j-1] :", text2[j-1])
 			if text1[i-1] == text2[j-1] {
 				dp[i][j] = 1 + dp[i-1][j-1]
 			} else {
@@ -82,6 +85,26 @@ func longestCommonSubsequence(text1 string, text2 string) int {
 		}
 	}
 
-	fmt.Println("retun result : ", dp[rows][col])
+	// fmt.Println("retun result : ", dp[rows][col])
 	return dp[rows][col]
+}
+
+func lcs(text1, text2 string, m, n int) int {
+
+	var max = func(x, y int) int {
+		if x > y {
+			return x
+		}
+		return y
+	}
+
+	if m == 0 || n == 0 {
+		return 0
+	}
+
+	if text1[m-1] == text2[n-1] {
+		return 1 + lcs(text1, text2, m-1, n-1)
+	}
+
+	return max(lcs(text1, text2, m, n-1), lcs(text1, text2, m-1, n))
 }
