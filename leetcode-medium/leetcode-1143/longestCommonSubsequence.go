@@ -89,6 +89,7 @@ func longestCommonSubsequence(text1 string, text2 string) int {
 	return dp[rows][col]
 }
 
+// RECURSION
 func lcs(text1, text2 string, m, n int) int {
 
 	var max = func(x, y int) int {
