@@ -70,4 +70,8 @@ func main() {
 
 	}
 
+	fmt.Printf("Enter element which you want to delete : ")
+	fmt.Scan(&n)
+	array.deleteElement(n)
+
 }
