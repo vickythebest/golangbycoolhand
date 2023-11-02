@@ -70,8 +70,18 @@ func main() {
 
 	}
 
-	fmt.Printf("Enter element which you want to delete : ")
+	// fmt.Printf("Enter element which you want to delete : ")
+	// fmt.Scan(&n)
+	// array.deleteElement(n)
+
+	fmt.Println("Linear Search Elements")
+	fmt.Printf("Enter element which you want to search : ")
 	fmt.Scan(&n)
-	array.deleteElement(n)
+	fmt.Println("Index of Elements is : ", array.searchElement(n))
+
+	fmt.Println("Binary Search Elements")
+	fmt.Printf("Enter element which you want to search : ")
+	fmt.Scan(&n)
+	array.binarySearch(n, 0, len(array.A))
 
 }
