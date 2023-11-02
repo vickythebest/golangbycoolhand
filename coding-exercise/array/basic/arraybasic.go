@@ -84,4 +84,6 @@ func main() {
 	fmt.Scan(&n)
 	array.binarySearch(n, 0, len(array.A))
 
+	fmt.Println("Max Element in array is : ", array.findMaxElement())
+
 }
