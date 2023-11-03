@@ -14,5 +14,5 @@ func LeftShift(array []int, index int) {
 			pos++
 		}
 	}
-	Display(leftShift)
+	display(leftShift)
 }

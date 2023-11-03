@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func Display(array []int) {
+func display(array []int) {
 
 	for i := range array {
 		fmt.Print("\t", array[i])

@@ -16,12 +16,12 @@ func reverseOrswap(array []int) {
 		j--
 
 	}
-	Display(array)
+	display(array)
 }
 
 func reverseArray(array []int) {
 	fmt.Print("Before :")
-	Display(array)
+	display(array)
 	length := len(array)
 
 	for i := 0; i < length/2; i++ {
@@ -29,5 +29,5 @@ func reverseArray(array []int) {
 
 	}
 	fmt.Print("After :")
-	Display(array)
+	display(array)
 }

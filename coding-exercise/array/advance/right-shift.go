@@ -22,5 +22,5 @@ func rightShift(array []int, positions int) {
 		}
 	}
 
-	Display(rightShift)
+	display(rightShift)
 }

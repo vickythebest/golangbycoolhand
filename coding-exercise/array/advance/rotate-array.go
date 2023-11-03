@@ -16,5 +16,5 @@ func rotateArray(array []int, postition int) {
 		rotateArray[i] = array[newIndex]
 	}
 
-	Display(rotateArray)
+	display(rotateArray)
 }
