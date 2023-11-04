@@ -1,5 +1,10 @@
 package main
 
+/*
+	array := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+	array2 := []int{11, 21, 31, 43, 51, 61, 73, 81, 91, 101}
+*/
 func mergeArray(arr1 []int, arr2 []int) {
 
 	length := len(arr1) + len(arr2)
@@ -42,7 +47,6 @@ func mergeSortedArray(arr1 []int, arr2 []int) {
 
 	length := len(arr1) + len(arr2)
 	mergeArray := make([]int, length)
-	// mergeArray := []int{}
 
 	i := 0
 	j := 0
