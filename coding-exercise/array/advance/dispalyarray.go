@@ -7,7 +7,9 @@ import (
 func display(array []int) {
 
 	for i := range array {
-		fmt.Print("\t", array[i])
+		if array[i] != 0 {
+			fmt.Print("\t", array[i])
+		}
 	}
 	fmt.Println()
 }

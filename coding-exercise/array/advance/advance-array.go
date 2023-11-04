@@ -34,9 +34,10 @@ func main() {
 	// fmt.Print("Merge sorted Array Result:")
 	// mergeSortedArray(array1, array2)
 
-	fmt.Print("Union Array Result:")
-	unionArray(array1, array2)
+	// fmt.Print("Union Array Result:")
+	// unionArray(array1, array2)
 
-	// union(array1, array2)
+	fmt.Print(" Array Intersection Result:")
+	interSection(array1, array2)
 
 }
