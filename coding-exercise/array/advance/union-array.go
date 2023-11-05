@@ -1,4 +1,4 @@
-package main
+package advance
 
 /*
 	array := []int{1, 21, 3, 4, 51, 6, 7, 81, 9, 10}

@@ -1,4 +1,4 @@
-package main
+package advance
 
 func rotateArray(array []int, postition int) {
 
