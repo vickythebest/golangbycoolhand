@@ -23,11 +23,15 @@ func main() {
 
 	// fmt.Println(result)
 
-	duplicate := []int{1, 1, 2, 2, 3, 4, 4}
-	fmt.Println(duplicate)
-	fmt.Println()
-	result := findDuplicate(duplicate)
-	fmt.Println()
-	fmt.Println("Result : ", result)
+	// duplicate := []int{1, 1, 2, 2, 3, 4, 4}
+	// fmt.Println(duplicate)
+	// fmt.Println()
+	// result := findDuplicate(duplicate)
+	// fmt.Println()
+	// fmt.Println("Result : ", result)
+
+	minMax := []int{-5, -2, -6, -9, -1, -3}
+	min, max := findMinAndMax(minMax)
+	fmt.Printf("Min : %v ,Max : %v ", min, max)
 
 }
